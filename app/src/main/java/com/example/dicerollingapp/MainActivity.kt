@@ -69,5 +69,8 @@ class MainActivity : AppCompatActivity() {
         return result.toString()
     }
 
-
+    // Display the result in the TextView
+    private fun displayResult(result: String) {
+        resultTextView.text = result
+    }
 }
