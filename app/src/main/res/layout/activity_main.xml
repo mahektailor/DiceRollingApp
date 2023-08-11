@@ -12,9 +12,17 @@
     <RadioGroup
         android:id="@+id/diceRadioGroup"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Number of Side " />
 
         <RadioButton
             android:id="@+id/radioButton4"
@@ -43,7 +51,7 @@
         <RadioButton
             android:id="@+id/radioButton12"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:text="12-sided" />
 
         <RadioButton
@@ -51,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20-sided" />
+
     </RadioGroup>
 
     <Spinner
@@ -82,4 +91,5 @@
         android:text=""
         android:textSize="18sp"
         android:textStyle="bold" />
+
 </LinearLayout>
