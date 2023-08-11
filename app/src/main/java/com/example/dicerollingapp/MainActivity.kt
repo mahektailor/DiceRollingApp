@@ -29,7 +29,25 @@ class MainActivity : AppCompatActivity() {
         rollTwiceButton = findViewById(R.id.rollTwiceButton)
         resultTextView = findViewById(R.id.resultTextView)
 
+        // Populate custom dice values in the spinner
+        val customDiceValues = listOf(4, 6, 8, 10, 12, 20)
+        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, customDiceValues)
+        customDiceSpinner.adapter = spinnerAdapter
 
+        // Set click listeners for roll buttons
+        rollButton.setOnClickListener {
+            val selectedDice = getSelectedDice()
+            val result = rollDice(selectedDice)
+            displayResult(result)
+        }
+
+        rollTwiceButton.setOnClickListener {
+            val selectedDice = getSelectedDice()
+            val result1 = rollDice(selectedDice)
+            val result2 = rollDice(selectedDice)
+            displayResult("Result 1: $result1\nResult 2: $result2")
+        }
+    }
 
     // Get the selected dice value based on user input
     private fun getSelectedDice(): Int {
