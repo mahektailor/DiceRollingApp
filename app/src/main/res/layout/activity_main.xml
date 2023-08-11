@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,52 +11,75 @@
 
     <RadioGroup
         android:id="@+id/diceRadioGroup"
-        android:layout_width="158dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
-        <!-- Add RadioButtons for dice options here -->
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4-sided" />
 
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6-sided" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8-sided" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10-sided" />
+
+        <RadioButton
+            android:id="@+id/radioButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12-sided" />
+
+        <RadioButton
+            android:id="@+id/radioButton20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20-sided" />
     </RadioGroup>
 
     <Spinner
         android:id="@+id/customDiceSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:minHeight="48dp"
-        app:layout_constraintTop_toBottomOf="@+id/diceRadioGroup"
-        tools:layout_editor_absoluteX="132dp" />
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/rollButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/roll"
-        app:layout_constraintTop_toBottomOf="@+id/customDiceSpinner"
-        tools:layout_editor_absoluteX="151dp" />
-
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="104dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="60dp"
-        android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/rollTwiceButton"
-        tools:layout_editor_absoluteX="148dp" />
+        android:layout_gravity="center"
+        android:text="Roll" />
 
     <Button
         android:id="@+id/rollTwiceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/roll_twice"
-        app:layout_constraintTop_toBottomOf="@+id/rollButton"
-        tools:layout_editor_absoluteX="142dp" />
+        android:layout_gravity="center"
+        android:text="Roll Twice" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>
