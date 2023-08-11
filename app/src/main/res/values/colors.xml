@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="peach">#FFDAB9</color>
+    <color name="dark_peach">#FFA500</color>
+    <color name="accent_color">#FF5733</color>
+    <color name="peach_background">#FFE4B5</color>
+    <color name="bluer">#384BFD</color>
 </resources>
